@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhush Wijethunga | Sustainability Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E8B57;
+            --primary-light: #4CAF50;
+            --accent: #8BC34A;
+            --light: #F1F8E9;
+            --dark: #1B5E20;
+            --text: #212121;
+            --text-light: #757575;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-right: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--white);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        /* Education Section */
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .education-item {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .education-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .education-content {
+            flex: 1;
+        }
+        
+        .education-date {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Carousel Sections */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-item {
+            flex: 0 0 calc(33.333% - 2rem);
+            margin: 0 1rem;
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .carousel-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .carousel-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .carousel-item:hover .carousel-img img {
+            transform: scale(1.1);
+        }
+        
+        .carousel-content {
+            padding: 1.5rem;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+        
+        .carousel-btn:hover {
+            background: var(--dark);
+        }
+        
+        .carousel-btn.prev {
+            left: 0;
+        }
+        
+        .carousel-btn.next {
+            right: 0;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .dot.active {
+            background: var(--primary);
+        }
+        
+        /* Expandable Content */
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .expandable-content.expanded {
+            max-height: 500px;
+        }
+        
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .read-more-btn i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .read-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+        
+        /* Certifications Section */
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .certification-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certification-img {
+            height: 200px;
+            overflow: hidden;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .certification-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .certification-content {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .carousel-item {
+                flex: 0 0 calc(50% - 2rem);
+            }
+            
+            .certifications-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .education-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .carousel-item {
+                flex: 0 0 calc(100% - 2rem);
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .certifications-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><i class="fas fa-leaf"></i> Santhush Wijethunga</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#volunteering">Volunteering</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Santhush Wijethunga</h1>
+                <p>Data-driven solutions for a sustainable future | Corporate Sustainability | Environmental Policy</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="santhush.jpg" alt="Santhush Wijethunga">
+                </div>
+                <div class="about-text">
+                    <h3>Passionate about sustainable solutions</h3>
+                    <p>I am an Environmental Management student with a strong passion for creating sustainable solutions through data-driven approaches. My focus is on corporate sustainability, environmental policy, and ecological conservation.</p>
+                    <p>With experience in research and data analysis, I aim to bridge the gap between environmental science and practical business applications to drive meaningful change.</p>
+                    <p>My goal is to help organizations implement sustainable practices that benefit both the environment and their bottom line.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="background-color: #F9F9F9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2021 - Present</div>
+                        <h3>BSc in Environmental Management</h3>
+                        <p><strong>University of Sustainable Studies</strong></p>
+                        <p>Focus on data analysis, sustainability practices, and environmental policy. Current GPA: 3.8/4.0</p>
+                        <button class="read-more-btn" onclick="toggleExpand('education1')">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="education1" class="expandable-content">
+                            <p>My coursework has included advanced topics in environmental science, sustainability assessment, data analysis for environmental applications, and environmental policy development. I've completed research projects on carbon footprint analysis of local businesses and waste management optimization for urban areas.</p>
+                            <p>Relevant coursework: Environmental Data Analysis, Sustainable Resource Management, Corporate Sustainability Strategies, Environmental Policy and Governance, Climate Change Mitigation, Life Cycle Assessment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2018 - 2021</div>
+                        <h3>Diploma in Environmental Science</h3>
+                        <p><strong>Green Valley College</strong></p>
+                        <p>Studied ecological systems, conservation methods, and environmental assessment. Graduated with Honors.</p>
+                        <button class="read-more-btn" onclick="toggleExpand('education2')">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="education2" class="expandable-content">
+                            <p>This program provided a strong foundation in environmental science principles, including ecology, conservation biology, environmental chemistry, and earth systems. I completed a capstone project on wetland restoration techniques that was presented at the Regional Environmental Conference.</p>
+                            <p>Key achievements: Dean's List for academic excellence, President of Environmental Club, Lead organizer of annual sustainability fair</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2020</div>
+                        <h3>Certification in Data Analysis for Sustainability</h3>
+                        <p><strong>Sustainable Data Institute</strong></p>
+                        <p>Specialized training in data analysis techniques for environmental applications.</p>
+                        <button class="read-more-btn" onclick="toggleExpand('education3')">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="education3" class="expandable-content">
+                            <p>This intensive certification program focused on applying data science techniques to sustainability challenges. I gained proficiency in R and Python for environmental data analysis, learned statistical methods for sustainability assessment, and developed skills in data visualization for environmental reporting.</p>
+                            <p>Skills acquired: Environmental data mining, predictive modeling for resource consumption, carbon accounting analytics, sustainability metrics development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>Proficient in R, Python, and SQL for environmental data analysis and visualization.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability Assessment</h3>
+                    <p>Experience in conducting life cycle assessments and carbon footprint analyses.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Corporate Sustainability</h3>
+                    <p>Developing and implementing ESG strategies for businesses.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Environmental Policy</h3>
+                    <p>Knowledge of environmental regulations and policy development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Carousel -->
+    <section id="projects" style="background-color: #F9F9F9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide('projects', -1)">&#10094;</button>
+                <div class="carousel" id="projects-carousel">
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Carbon Footprint Analysis">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Carbon Footprint Analysis</h3>
+                            <p>Comprehensive analysis of carbon emissions for manufacturing company with reduction strategies.</p>
+                            <button class="read-more-btn" onclick="toggleExpand('project1')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="project1" class="expandable-content">
+                                <p>This project involved conducting a comprehensive carbon footprint analysis for a mid-sized manufacturing company. I collected data from various departments including production, logistics, and facilities management.</p>
+                                <p>Using statistical analysis and predictive modeling, I identified the major sources of emissions and developed a strategy to reduce the company's carbon footprint by 35% over five years. The proposed measures included transitioning to renewable energy sources, optimizing logistics routes, and implementing waste reduction programs.</p>
+                                <p>The project resulted in estimated cost savings of $120,000 annually while significantly reducing environmental impact. The management team has begun implementing the recommendations, starting with a solar panel installation on facility rooftops.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Waste Management System">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Waste Management System</h3>
+                            <p>Designed an efficient waste management system for urban areas focusing on recycling.</p>
+                            <button class="read-more-btn" onclick="toggleExpand('project2')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="project2" class="expandable-content">
+                                <p>This urban waste management project aimed to increase recycling rates in a metropolitan area with over 1 million residents. I began by analyzing current waste streams and identifying key challenges in the existing system.</p>
+                                <p>My proposed solution included: implementing color-coded bins for different waste categories, developing a public education campaign about recycling, creating a mobile app for waste collection scheduling, and establishing partnerships with local recycling facilities.</p>
+                                <p>The pilot program in three neighborhoods resulted in a 42% increase in recycling rates and a 28% reduction in landfill waste. The city council has approved expanding the program to five additional districts next year.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Renewable Energy Implementation">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Renewable Energy Implementation</h3>
+                            <p>Feasibility study and implementation plan for solar energy in commercial buildings.</p>
+                            <button class="read-more-btn" onclick="toggleExpand('project3')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="project3" class="expandable-content">
+                                <p>This project involved developing a comprehensive feasibility study for implementing solar energy solutions across a portfolio of commercial buildings. I analyzed energy consumption patterns, roof space availability, local climate data, and financial incentives.</p>
+                                <p>The study covered technical specifications, financial analysis (including ROI calculations and payback periods), environmental impact assessment, and implementation timelines. I also coordinated with solar installation companies to obtain accurate quotes and technical specifications.</p>
+                                <p>The final implementation plan proposed a phased approach starting with the most suitable buildings, projecting a 25% reduction in grid electricity consumption and an estimated payback period of 6.5 years. The client has begun implementing the first phase, which includes installing solar panels on three office buildings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide('projects', 1)">&#10095;</button>
+                <div class="carousel-dots" id="projects-dots">
+                    <!-- Dots will be added by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Certifications</h2>
+            </div>
+            <div class="certifications-container">
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Environmental Management Systems">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Environmental Management Systems</h3>
+                        <p>ISO 14001 Certified</p>
+                        <p>Issued: June 2022</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="https://images.unsplash.com/photo-1603201667141-5b2acea2d466?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Sustainability Reporting">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Sustainability Reporting</h3>
+                        <p>GRI Standards Certified</p>
+                        <p>Issued: March 2023</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Carbon Accounting">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Carbon Accounting</h3>
+                        <p>GHG Protocol Certified</p>
+                        <p>Issued: January 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering Section with Carousel -->
+    <section id="volunteering" style="background-color: #F9F9F9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Volunteering</h2>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide('volunteering', -1)">&#10094;</button>
+                <div class="carousel" id="volunteering-carousel">
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="beach.jpg" alt="Beach Cleanup Initiative">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Beach Cleanup Initiative</h3>
+                            <p>Organized monthly beach cleanup events, coordinating teams of up to 50 volunteers.</p>
+                            <button class="read-more-btn" onclick="toggleExpand('volunteer1')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="volunteer1" class="expandable-content">
+                                <p>As the lead coordinator for the Coastal Care Initiative, I organized monthly beach cleanup events along the city's coastline. My responsibilities included recruiting volunteers, coordinating with local authorities, securing necessary permissions, and managing event logistics.</p>
+                                <p>Over 18 months, we organized 16 cleanup events with participation from over 600 volunteers collectively. We removed more than 4.5 tons of plastic waste and debris from beaches, significantly improving the local ecosystem.</p>
+                                <p>I also implemented an educational component to raise awareness about marine pollution, conducting brief workshops at each event about the impact of plastic on marine life and practical ways to reduce single-use plastics in daily life.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1581578021517-5d8ad8597852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Reforestation Project">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Reforestation Project</h3>
+                            <p>Participated in tree planting initiatives, helping to plant over 1000 trees in deforested areas.</p>
+                            <button class="read-more-btn" onclick="toggleExpand('volunteer2')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="volunteer2" class="expandable-content">
+                                <p>I volunteered with the Green Earth Foundation for their annual reforestation project in the Northern region, which had been affected by wildfires. Over three months, I participated in weekend planting events and took on additional responsibilities in seedling preparation and site assessment.</p>
+                                <p>My team focused on planting native species that were resilient to changing climate conditions and provided habitat for local wildlife. We employed sustainable planting techniques to ensure high survival rates for the saplings.</p>
+                                <p>Beyond the physical planting, I helped develop a monitoring system to track the growth and health of the newly planted trees, creating a database that the organization continues to use for long-term forest management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Environmental Education">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Environmental Education</h3>
+                            <p>Conducted workshops at local schools to raise awareness about sustainability practices.</p>
+                            <button class="read-more-btn" onclick="toggleExpand('volunteer3')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="volunteer3" class="expandable-content">
+                                <p>As part of the Youth Environmental Education Program, I developed and delivered interactive workshops for students aged 10-16 in 12 local schools. The curriculum covered topics such as climate change, recycling, conservation, and sustainable living practices.</p>
+                                <p>I created engaging educational materials including presentations, hands-on activities, and take-home resources. One of the most successful activities was a "waste audit" where students analyzed their classroom trash to understand recycling opportunities.</p>
+                                <p>The program reached over 800 students and resulted in several schools implementing new sustainability initiatives like composting programs and energy conservation campaigns. Pre- and post-workshop assessments showed a 65% increase in students' understanding of environmental issues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide('volunteering', 1)">&#10095;</button>
+                <div class="carousel-dots" id="volunteering-dots">
+                    <!-- Dots will be added by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section with Carousel -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Blogs</h2>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide('blog', -1)">&#10094;</button>
+                <div class="carousel" id="blog-carousel">
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Data in Environmental Decision Making">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>The Role of Data in Environmental Decision Making</h3>
+                            <p>Data-driven approaches are revolutionizing how we tackle environmental challenges...</p>
+                            <button class="read-more-btn" onclick="toggleExpand('blog1')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="blog1" class="expandable-content">
+                                <p>In today's complex environmental landscape, data-driven decision making has become essential for developing effective sustainability strategies. This article explores how organizations can leverage data analytics to make informed environmental decisions.</p>
+                                <p>I discuss several case studies where data analysis led to significant environmental improvements, including a manufacturing company that reduced its water consumption by 40% through detailed usage monitoring and pattern analysis.</p>
+                                <p>The article also covers practical approaches for collecting environmental data, analytical techniques for identifying trends and patterns, and strategies for translating data insights into actionable sustainability initiatives. I emphasize the importance of establishing clear key performance indicators (KPIs) and using visualization tools to communicate findings effectively to stakeholders.</p>
+                                <p>Finally, I address common challenges in environmental data collection and analysis, and provide recommendations for overcoming these obstacles to create robust, data-informed environmental management <systems class="cbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+                                </systems></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1569163139394-de44aa9a21bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Corporate Sustainability">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Corporate Sustainability: Beyond Greenwashing</h3>
+                            <p>Many companies claim to be sustainable, but how can we distinguish genuine efforts...</p>
+                            <button class="read-more-btn" onclick="toggleExpand('blog2')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="blog2" class="expandable-content">
+                                <p>With increasing consumer awareness and regulatory pressure, corporate sustainability has moved from a niche concern to a mainstream business imperative. However, this has also led to an increase in "greenwashing" - superficial or misleading sustainability claims.</p>
+                                <p>This article provides a framework for evaluating the authenticity of corporate sustainability efforts. I discuss key indicators of genuine commitment, such as board-level accountability, ambitious target-setting, transparent reporting, and third-party verification.</p>
+                                <p>I also examine several case studies of companies that have successfully integrated sustainability into their core business strategies, highlighting the business benefits they've realized including enhanced brand reputation, increased customer loyalty, operational efficiencies, and improved risk management.</p>
+                                <p>The article concludes with practical advice for sustainability professionals on how to advocate for meaningful environmental initiatives within their organizations and avoid falling into the trap of superficial sustainability measures.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Circular Economy">
+                        </div>
+                        <div class="carousel-content">
+                            <h3>Circular Economy: The Future of Sustainable Business</h3>
+                            <p>The transition from a linear to a circular economy is essential for long-term sustainability...</p>
+                            <button class="read-more-btn" onclick="toggleExpand('blog3')">
+                                Read More <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="blog3" class="expandable-content">
+                                <p>The circular economy represents a fundamental shift from our traditional "take-make-waste" linear model to one that is regenerative by design. This article explores the principles of circular economy and their application in various business contexts.</p>
+                                <p>I examine several innovative business models that embrace circularity, including product-as-a-service, sharing platforms, and remanufacturing. For each model, I discuss the environmental benefits, implementation challenges, and business opportunities.</p>
+                                <p>The article also provides practical guidance for companies looking to transition to circular practices, including how to conduct a circularity assessment, identify opportunities for material recovery, design products for disassembly and reuse, and develop reverse logistics capabilities.</p>
+                                <p>I highlight several success stories from companies that have embraced circular economy principles, demonstrating how these approaches can create value while reducing environmental impact. The article concludes with a discussion of policy frameworks that support the transition to a circular economy and how businesses can advocate for these changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide('blog', 1)">&#10095;</button>
+                <div class="carousel-dots" id="blog-dots">
+                    <!-- Dots will be added by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #F9F9F9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div style="text-align: center;">
+                <p>Feel free to reach out for collaborations or inquiries</p>
+                <a href="mailto:santhush@example.com" class="btn" style="margin-top: 2rem;">Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Santhush Wijethunga</h3>
+            <p>Creating sustainable solutions through data-driven approaches</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2023 Santhush Wijethunga. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize carousels
+        document.addEventListener('DOMContentLoaded', function() {
+            initCarousel('projects');
+            initCarousel('volunteering');
+            initCarousel('blog');
+        });
+
+        // Carousel functionality
+        function initCarousel(section) {
+            const carousel = document.getElementById(`${section}-carousel`);
+            const items = carousel.querySelectorAll('.carousel-item');
+            const dotsContainer = document.getElementById(`${section}-dots`);
+            
+            // Create dots
+            items.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => showSlide(section, i));
+                dotsContainer.appendChild(dot);
+            });
+            
+            // Set initial position
+            updateCarousel(section);
+        }
+
+        function moveSlide(section, direction) {
+            const carousel = document.getElementById(`${section}-carousel`);
+            const items = carousel.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll(`#${section}-dots .dot`);
+            const currentIndex = parseInt(carousel.dataset.currentIndex) || 0;
+            
+            let newIndex = currentIndex + direction;
+            
+            // Check boundaries
+            if (newIndex < 0) newIndex = items.length - 1;
+            if (newIndex >= items.length) newIndex = 0;
+            
+            // Update current index
+            carousel.dataset.currentIndex = newIndex;
+            
+            // Update carousel
+            updateCarousel(section);
+            
+            // Update active dot
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === newIndex);
+            });
+        }
+
+        function showSlide(section, index) {
+            const carousel = document.getElementById(`${section}-carousel`);
+            const dots = document.querySelectorAll(`#${section}-dots .dot`);
+            
+            // Update current index
+            carousel.dataset.currentIndex = index;
+            
+            // Update carousel
+            updateCarousel(section);
+            
+            // Update active dot
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function updateCarousel(section) {
+            const carousel = document.getElementById(`${section}-carousel`);
+            const items = carousel.querySelectorAll('.carousel-item');
+            const currentIndex = parseInt(carousel.dataset.currentIndex) || 0;
+            
+            // Calculate transform value
+            const transformValue = -currentIndex * (100 / items.length) * items.length;
+            carousel.style.transform = `translateX(${transformValue}%)`;
+        }
+
+        // Expandable content functionality
+        function toggleExpand(id) {
+            const content = document.getElementById(id);
+            const button = document.querySelector(`button[onclick="toggleExpand('${id}')"]`);
+            
+            content.classList.toggle('expanded');
+            button.classList.toggle('expanded');
+            
+            if (content.classList.contains('expanded')) {
+                button.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+            } else {
+                button.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+            }
+        }
+    </script>
+</body>
+</html>
